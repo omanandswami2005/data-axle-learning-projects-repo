@@ -19,6 +19,8 @@ htmlcov/
 
 # Playwright artifacts
 playwright/.cache/
+the-internet-test-scripts/downloads/
+the-internet-test-scripts/behave_example/artifacts/
 
 # Streamlit cache
 .streamlit/
