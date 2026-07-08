@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2rem; }
+      form { max-width: 320px; display: grid; gap: 0.75rem; }
+      input, button { padding: 0.6rem; }
+      .message { margin-top: 1rem; color: #0b6e4f; }
+      .error { color: #b00020; }
+    </style>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form>
+      <input id="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Password" />
+      <button type="submit">Sign in</button>
+    </form>
+    <p class="message" id="feedback">Please enter your credentials.</p>
+    <script>
+      const form = document.querySelector('form');
+      const feedback = document.getElementById('feedback');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        if (!email || !password) {
+          feedback.className = 'error';
+          feedback.textContent = 'Email and password are required.';
+        } else if (email === 'user@example.com' && password === 'Password123') {
+          feedback.className = 'message';
+          feedback.textContent = 'Login successful!';
+        } else {
+          feedback.className = 'error';
+          feedback.textContent = 'Invalid credentials.';
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2rem; }
+      form { max-width: 400px; display: grid; gap: 0.75rem; }
+      input, button { padding: 0.6rem; }
+      .message { margin-top: 1rem; color: #0b6e4f; }
+      .error { color: #b00020; }
+    </style>
+  </head>
+  <body>
+    <h1>Checkout</h1>
+    <form>
+      <input id="name" placeholder="Full name" />
+      <input id="address" placeholder="Address" />
+      <input id="city" placeholder="City" />
+      <button type="submit">Place order</button>
+    </form>
+    <p id="feedback" class="message">Please complete the checkout form.</p>
+    <script>
+      const form = document.querySelector('form');
+      const feedback = document.getElementById('feedback');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const address = document.getElementById('address').value.trim();
+        const city = document.getElementById('city').value.trim();
+        if (!name || !address || !city) {
+          feedback.className = 'error';
+          feedback.textContent = 'All shipping fields are required.';
+        } else {
+          feedback.className = 'message';
+          feedback.textContent = 'Order placed successfully!';
+        }
+      });
+    </script>
+  </body>
+</html>

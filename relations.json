@@ -1,0 +1,90 @@
+{
+  "stories": [
+    {
+      "id": "story-001",
+      "title": "User Login",
+      "file": "stories/story-001-user-login.md",
+      "pages": ["Login Page"],
+      "features": ["login.feature"],
+      "step_file": "features/steps/login_steps.py"
+    },
+    {
+      "id": "story-006",
+      "title": "Homepage Experience",
+      "file": "stories/story-006-homepage-experience.md",
+      "pages": ["Home Page"],
+      "features": ["button.feature", "intro_text.feature"],
+      "step_file": "features/steps/common_steps.py"
+    },
+    {
+      "id": "story-002",
+      "title": "Search Products",
+      "file": "stories/story-002-search-products.md",
+      "pages": ["Search Page"],
+      "features": ["search.feature"],
+      "step_file": "features/steps/search_steps.py"
+    },
+    {
+      "id": "story-003",
+      "title": "Checkout Flow",
+      "file": "stories/story-003-checkout-flow.md",
+      "pages": ["Checkout Page"],
+      "features": ["checkout.feature"],
+      "step_file": "features/steps/checkout_steps.py"
+    },
+    {
+      "id": "story-004",
+      "title": "Password Reset",
+      "file": "stories/story-004-password-reset.md",
+      "pages": ["Password Reset Page"],
+      "features": ["password_reset.feature"],
+      "step_file": "features/steps/password_reset_steps.py"
+    },
+    {
+      "id": "story-005",
+      "title": "Profile Update",
+      "file": "stories/story-005-profile-update.md",
+      "pages": ["Profile Page"],
+      "features": ["profile.feature"],
+      "step_file": "features/steps/profile_steps.py"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Login Page",
+      "path": "app/pages/login.html",
+      "feature_files": ["login.feature"],
+      "step_files": ["features/steps/login_steps.py"]
+    },
+    {
+      "name": "Home Page",
+      "path": "app/index.html",
+      "feature_files": ["button.feature", "intro_text.feature"],
+      "step_files": ["features/steps/common_steps.py"]
+    },
+    {
+      "name": "Search Page",
+      "path": "app/pages/search.html",
+      "feature_files": ["search.feature"],
+      "step_files": ["features/steps/search_steps.py"]
+    },
+    {
+      "name": "Checkout Page",
+      "path": "app/pages/checkout.html",
+      "feature_files": ["checkout.feature"],
+      "step_files": ["features/steps/checkout_steps.py"]
+    },
+    {
+      "name": "Password Reset Page",
+      "path": "app/pages/password-reset.html",
+      "feature_files": ["password_reset.feature"],
+      "step_files": ["features/steps/password_reset_steps.py"]
+    },
+    {
+      "name": "Profile Page",
+      "path": "app/pages/profile.html",
+      "feature_files": ["profile.feature"],
+      "step_files": ["features/steps/profile_steps.py"]
+    }
+  ]
+}

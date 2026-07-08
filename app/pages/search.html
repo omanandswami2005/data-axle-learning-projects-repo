@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Products</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2rem; }
+      input, button { padding: 0.6rem; }
+      .result { margin-top: 1rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Search Products</h1>
+    <input id="search" placeholder="Search products" />
+    <button onclick="runSearch()">Search</button>
+    <div id="result" class="result">Type a keyword to search.</div>
+    <script>
+      function runSearch() {
+        const term = document.getElementById('search').value.trim().toLowerCase();
+        const result = document.getElementById('result');
+        const products = ['Laptop', 'Phone', 'Headphones', 'Monitor'];
+        const matches = products.filter(item => item.toLowerCase().includes(term));
+        if (!term) {
+          result.textContent = 'Please enter a search term.';
+        } else if (matches.length) {
+          result.textContent = 'Matches: ' + matches.join(', ');
+        } else {
+          result.textContent = 'No products found.';
+        }
+      }
+    </script>
+  </body>
+</html>
